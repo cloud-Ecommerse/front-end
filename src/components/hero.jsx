@@ -6,7 +6,7 @@ const Hero = () => {
  <div className="w-full min-h-screen bg-gray-100">
        {/* Hero Section */}
       <section className="text-center py-16 px-8 bg-white flex flex-col md:flex-row items-center justify-center gap-8">
-        <div className="md:w-1/2 order-2 md:order-1">
+        <div data-aos="fade-right" className="md:w-1/2 order-2 md:order-1">
           <h2 className="text-4xl font-extrabold mb-4">
             FIND CLOTHES THAT MATCHES YOUR STYLE
           </h2>
@@ -18,7 +18,7 @@ const Hero = () => {
             Shop Now
           </button>
         </div>
-        <div className="md:w-1/2 order-1 md:order-2">
+        <div data-aos="zoom-in" className="md:w-1/2 order-1 md:order-2">
           <img 
             src={logo}
             alt="Fashion Models" 

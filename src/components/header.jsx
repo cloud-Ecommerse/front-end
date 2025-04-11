@@ -2,10 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "/src/assets/logo.png";
 
-import cartIcon from "/src/assets/shopping_cart.svg";
-import accountIcon from "/src/assets/account.svg";
-import searchIcon from "/src/assets/search.svg";
-
 const Header = () => {
   return (
     <header className="bg-white shadow-md">
@@ -55,18 +51,17 @@ const Header = () => {
           <div className="flex items-center space-x-6">
             {/* Search */}
             <div className="relative w-64">
+              <span className="material-symbols-outlined absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
+                search
+              </span>
               <input
                 type="search"
                 placeholder="Search for products"
                 aria-label="Search"
                 className="w-full h-12 pl-12 pr-12 rounded-full border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <img
-                src={searchIcon}
-                alt="Search Icon"
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 pointer-events-none"
-              />
             </div>
+
 
             {/* Auth Buttons */}
             <NavLink
@@ -86,17 +81,19 @@ const Header = () => {
             {/* Cart and Profile */}
             <NavLink
               to="/cart"
-              className="p-2 hover:bg-blue-200 rounded-full transition duration-300"
+              className="p-2 hover:bg-gray-100 rounded-full transition duration-300"
             >
-              <img src={cartIcon} alt="Cart Icon" className="h-6 w-6" />
+              <span class="material-symbols-outlined">shopping_cart</span>
             </NavLink>
 
             <NavLink
               to="/profile"
-              className="p-2 hover:bg-blue-200 rounded-full transition duration-300"
+              className="p-2 hover:bg-gray-100 rounded-full transition duration-300"
             >
-              <img src={accountIcon} alt="Profile Icon" className="h-6 w-6" />
+
+              <span class="material-symbols-outlined">account_circle</span>
             </NavLink>
+
           </div>
         </nav>
       </div>

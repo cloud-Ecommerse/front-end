@@ -1,19 +1,19 @@
 import React from "react";
 
-function Top_selling() {
+function Display() {
   const products = [
     {
       id: 1,
       name: "T-SHIRT WITH TAPE DETAILS",
       price: "$5",
-      image: "/src/assets/s.png",
+      image: "/src/assets/tsirt.png",
       rating: 5.0,
     },
     {
       id: 2,
-      name: "Jean  ",
+      name: "Work Trouser ",
       price: "$15",
-      image: "/src/assets/jean.png",
+      image: "/src/assets/trosure.png",
       rating: 4.8,
     },
     {
@@ -25,21 +25,22 @@ function Top_selling() {
     },
     {
       id: 3,
-      name: "Winter Jacket",
+      name: "Taylor Linen Dress ",
       price: "$22",
-      image: "/src/assets/jacket.png",
+      image: "/src/assets/dress.png",
       rating: 4.5,
     }
   ];
 
   return (
-    <div className="w-full min-h-screen bg-white-100 ">
+    
+    <div className="w-full min-h-screen bg-white-100">
       {/* New Arrivals */}
       <section className="mx-auto  py-8 px-8 ">
-        <h2 className="text-3xl font-bold text-center  mb-5">Top Selling</h2>
+        <h2 className="text-3xl font-bold text-center mb-5">New Arrivals</h2>
         <div className="flex grid-cols-4 justify-center gap-8">
           {products.map((product) => (
-            <div
+            <div data-aos="zoom-in"
               key={product.id}
               className="w-85 bg-white border border-gray-200 rounded-xl shadow-sm p-6 hover:shadow-lg transition-all duration-300"
             >
@@ -68,6 +69,4 @@ function Top_selling() {
   );
 }
 
-export default Top_selling;
-
-
+export default Display;

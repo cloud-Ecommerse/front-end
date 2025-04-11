@@ -1,14 +1,11 @@
 import React from "react";
 import userImage from "/src/assets/logo.png";
 
-// Custom SVG icons (update paths if necessary)
-import nameIcon from "/src/assets/account.svg";
-import passwordIcon from "/src/assets/lock.svg";
-import emailIcon from "/src/assets/mail.svg";
-
 const AccountPreferences = () => {
   return (
-    <div className="mb-5 text-center text-2xl font-bold text-blue-800">Account</div>
+    <div className="mb-5 text-center text-2xl font-bold text-blue-800">
+      Account
+    </div>
   );
 };
 
@@ -43,10 +40,12 @@ const AccountSection = ({ account, editField }) => {
 
       {/* Full Name */}
       <div className="py-3">
-        <h2 className="text-lg font-bold text-black mb-4">Full Name</h2>
+        <h2 className="text-lg font-bold text-black mb-2">Full Name</h2>
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <img src={nameIcon} alt="Name Icon" className="w-5 h-5" />
+            <span className="material-symbols-outlined text-gray-500">
+              account_circle
+            </span>
             <p>{account.fullName}</p>
           </div>
           <button
@@ -60,10 +59,12 @@ const AccountSection = ({ account, editField }) => {
 
       {/* Password */}
       <div className="py-3">
-        <h2 className="text-lg font-bold text-black mb-4">Password</h2>
+        <h2 className="text-lg font-bold text-black mb-2">Password</h2>
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <img src={passwordIcon} alt="Password Icon" className="w-5 h-5" />
+            <span className="material-symbols-outlined text-gray-500">
+              lock
+            </span>
             <p>*********</p>
           </div>
           <button
@@ -77,10 +78,12 @@ const AccountSection = ({ account, editField }) => {
 
       {/* Email */}
       <div className="py-3">
-        <h2 className="text-lg font-bold text-black mb-4">Email</h2>
+        <h2 className="text-lg font-bold text-black mb-2">Email</h2>
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <img src={emailIcon} alt="Email Icon" className="w-5 h-5" />
+            <span className="material-symbols-outlined text-gray-500">
+              email
+            </span>
             <p>{account.email}</p>
           </div>
           <button
