@@ -13,21 +13,24 @@ const Header = () => {
             <div className="space-x-10">
               <span className="text-3xl font-bold text-blue-600">Cloth Shop</span>
               <NavLink
-                to="/"
+                to="/home"
                 className={({ isActive }) =>
                   `text-md font-semibold ${isActive ? "text-blue-800" : "text-black"} hover:text-blue-700`
                 }
               >
                 Home
               </NavLink>
+
               <NavLink
-                to="/shop"
+                to="/product-details"
                 className={({ isActive }) =>
                   `text-md font-semibold ${isActive ? "text-blue-800" : "text-black"} hover:text-blue-700`
                 }
               >
                 Shop
               </NavLink>
+
+
               <NavLink
                 to="/new-arrivals"
                 className={({ isActive }) =>
