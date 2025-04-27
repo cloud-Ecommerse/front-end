@@ -7,7 +7,7 @@ import TopSelling from './product-management/top-selling';
 import Footer from './components/footer';
 import SignIn from './authentication/log-in';
 import SignUp from './authentication/sign-up';
-import Cart from './cart/cart-detail';
+import Cart from './Cart/cart-detail';
 import Profile from './profile-management/update-profile';
 import listAllUser from './api/user/listAllUser';
 

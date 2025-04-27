@@ -11,7 +11,7 @@ const cartItems = [
     image: "/src/assets/tsirt.png",
   },
   {
-    id: 2,
+    id: 2,  
     name: "Checkered Shirt",
     size: "Medium",
     color: "Red",
