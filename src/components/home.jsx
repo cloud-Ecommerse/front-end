@@ -1,28 +1,23 @@
-import Header from './header.jsx';
-import Hero from './Hero.jsx';
-import Display from '../product-management/display.jsx';
-import Top_selling from '../product-management/top-selling.jsx';
-import Footer from './footer.jsx';
-import { BrowserRouter } from "react-router-dom";
 import React from "react";
-import ProductList from "./product-management/product";
-const app = ()=> {
-   
+import { BrowserRouter } from "react-router-dom";
+import Header from './header.jsx';
+import Hero from './hero.jsx';
+import Display from '../product-management/display.jsx';
+import TopSelling from '../product-management/top-selling.jsx'; // Changed to camelCase naming
+import Footer from './footer.jsx';
+import ProductList from "../product-management/product.jsx"; // Fixed path if needed
+
+const App = () => { // Capitalized component name for consistency
   return (
-    <>
-      
-      <BrowserRouter>
-        <Header />
-      </BrowserRouter>,
-     
+    <BrowserRouter> {/* Moved BrowserRouter to wrap all components */}
+      <Header />
       <ProductList />
- 
-      < Hero />
-      < Display />
-      < Top_selling />
-      < Footer />
-    </>
+      <Hero />
+      <Display />
+      <TopSelling /> {/* Updated component name in JSX */}
+      <Footer />
+    </BrowserRouter>
   );
 }
 
-export default app;
+export default App; // Capitalized export name

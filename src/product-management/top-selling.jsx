@@ -1,8 +1,8 @@
 import React from "react";
-import tshirtImage from "/src/assets/s.png";
-import jeanImage from "/src/assets/jean.png";
-import dressImage from "/src/assets/dress.png";
-import jacketImage from "/src/assets/jacket.png";
+import tshirtImage from "../assets/s.png";
+import jeanImage from "../assets/jean.png";
+import dressImage from "../assets/dress.png";
+import jacketImage from "../assets/jacket.png";
 
 function Top_selling() {
   const products = [

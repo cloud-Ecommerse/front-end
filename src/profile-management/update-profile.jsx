@@ -1,5 +1,5 @@
 import React from "react";
-import userImage from "/src/assets/logo.png";
+import userImage from "../assets/logo.png";
 
 const AccountPreferences = () => {
   return (

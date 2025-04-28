@@ -9,12 +9,16 @@ function ProductList() {
   useEffect(() => {
     axios.get('http://localhost:1337/api/products')
       .then(response => {
-        setProducts(response.data.data); // Save the product data in state
+        if (response.data && response.data.data) {
+          setProducts(response.data.data);
+        } else {
+          setError('Invalid response format');
+        }
         setLoading(false);
       })
       .catch(error => {
-        console.error('Error fetching products:', error); // Log the error for debugging
-        setError(error.message); // Handle error
+        console.error('Error fetching products:', error);
+        setError(error.message || 'Failed to fetch products');
         setLoading(false);
       });
   }, []);
@@ -30,14 +34,18 @@ function ProductList() {
   return (
     <div>
       <h1>Products</h1>
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            <h2>{product.attributes.Name}</h2>
-            <p>{product.attributes.Hello}</p>
-          </li>
-        ))}
-      </ul>
+      {products.length === 0 ? (
+        <p>No products found</p>
+      ) : (
+        <ul>
+          {products.map((product) => (
+            <li key={product.id}>
+              <h2>{product.attributes.Name || 'Unnamed Product'}</h2>
+              <p>{product.attributes.Description || 'No description available'}</p>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

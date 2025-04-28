@@ -1,6 +1,7 @@
-
 import React, { useState } from "react";
-import tshirt from "/src/assets/tsirt.png";
+// Changed the import path from absolute to relative
+import tshirt from "../assets/tsirt.png";
+
 const ProductDetail = () => {
   const [selectedColor, setSelectedColor] = useState("brown");
   const [selectedSize, setSelectedSize] = useState("Large");
@@ -14,7 +15,7 @@ const ProductDetail = () => {
       {/* Image */}
       <div className="flex justify-center">
         <img
-          src={tshirt} // Replace with actual image source
+          src={tshirt}
           alt="One Life Graphic T-Shirt"
           className="rounded-lg w-80 object-cover"
         />

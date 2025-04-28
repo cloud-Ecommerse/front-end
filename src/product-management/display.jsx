@@ -1,4 +1,8 @@
 import React from "react";
+// Import images at the top
+import tshirtImage from "../assets/tsirt.png";
+import trouserImage from "../assets/trosure.png";
+import dressImage from "../assets/dress.png";
 
 function Display() {
   const products = [
@@ -6,41 +10,41 @@ function Display() {
       id: 1,
       name: "T-SHIRT WITH TAPE DETAILS",
       price: "$5",
-      image: "/src/assets/tsirt.png",
+      image: tshirtImage, // Use the imported image
       rating: 5.0,
     },
     {
       id: 2,
       name: "Work Trouser ",
       price: "$15",
-      image: "/src/assets/trosure.png",
+      image: trouserImage, // Use the imported image
       rating: 4.8,
     },
     {
       id: 3,
       name: "Taylor Linen Dress ",
       price: "$22",
-      image: "/src/assets/dress.png",
+      image: dressImage, // Use the imported image
       rating: 4.5,
     },
     {
-      id: 3,
+      id: 4,
       name: "Taylor Linen Dress ",
       price: "$22",
-      image: "/src/assets/dress.png",
+      image: dressImage, // Use the imported image
       rating: 4.5,
     }
   ];
 
   return (
-    
     <div className="w-full min-h-screen bg-white-100">
       {/* New Arrivals */}
-      <section className="mx-auto  py-8 px-8 ">
+      <section className="mx-auto py-8 px-8">
         <h2 className="text-3xl font-bold text-center mb-5">New Arrivals</h2>
         <div className="flex grid-cols-4 justify-center gap-8">
           {products.map((product) => (
-            <div data-aos="zoom-in"
+            <div 
+              data-aos="zoom-in"
               key={product.id}
               className="w-85 bg-white border border-gray-200 rounded-xl shadow-sm p-6 hover:shadow-lg transition-all duration-300"
             >
