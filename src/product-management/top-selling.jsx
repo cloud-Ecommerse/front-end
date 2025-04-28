@@ -1,4 +1,11 @@
 import React from "react";
+<<<<<<< HEAD
+=======
+import tshirtImage from "../assets/s.png";
+import jeanImage from "../assets/jean.png";
+import dressImage from "../assets/dress.png";
+import jacketImage from "../assets/jacket.png";
+>>>>>>> d40cb0c (update)
 
 function Top_selling() {
   const products = [

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "/src/assets/logo.png";
+// Changed the import path from absolute to relative
+import logo from "../assets/logo.png";
 
 const Header = () => {
   return (
@@ -28,6 +29,10 @@ const Header = () => {
               >
                 Shop
               </NavLink>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d40cb0c (update)
               <NavLink
                 to="/new-arrivals"
                 className={({ isActive }) =>
@@ -62,7 +67,6 @@ const Header = () => {
               />
             </div>
 
-
             {/* Auth Buttons */}
             <NavLink
               to="/signin"
@@ -83,17 +87,15 @@ const Header = () => {
               to="/cart"
               className="p-2 hover:bg-gray-100 rounded-full transition duration-300"
             >
-              <span class="material-symbols-outlined">shopping_cart</span>
+              <span className="material-symbols-outlined">shopping_cart</span>
             </NavLink>
 
             <NavLink
               to="/profile"
               className="p-2 hover:bg-gray-100 rounded-full transition duration-300"
             >
-
-              <span class="material-symbols-outlined">account_circle</span>
+              <span className="material-symbols-outlined">account_circle</span>
             </NavLink>
-
           </div>
         </nav>
       </div>
