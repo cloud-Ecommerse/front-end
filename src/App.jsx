@@ -6,11 +6,7 @@ import TopSelling from './product-management/top-selling';
 import Footer from './components/footer';
 import SignIn from './authentication/log-in';
 import SignUp from './authentication/sign-up';
-<<<<<<< HEAD
 import Cart from './Cart/cart-detail';
-=======
-
->>>>>>> d40cb0c33546f156fffa4fb05d79ada8c23e1594
 import Profile from './profile-management/update-profile';
 import ProductDetail from "./product-management/product-detail";
 import Hero from './components/hero'; // <-- You forgot this import
