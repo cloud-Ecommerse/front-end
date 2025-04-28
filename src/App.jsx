@@ -1,15 +1,19 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/header';
-import Hero from './components/hero';
 import Display from './product-management/display';
 import TopSelling from './product-management/top-selling';
 import Footer from './components/footer';
 import SignIn from './authentication/log-in';
 import SignUp from './authentication/sign-up';
+<<<<<<< HEAD
 import Cart from './Cart/cart-detail';
+=======
+
+>>>>>>> d40cb0c33546f156fffa4fb05d79ada8c23e1594
 import Profile from './profile-management/update-profile';
-import listAllUser from './api/user/listAllUser';
+import ProductDetail from "./product-management/product-detail";
+import Hero from './components/hero'; // <-- You forgot this import
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -17,31 +21,26 @@ import "aos/dist/aos.css";
 function App() {
   useEffect(() => {
     // Initialize animations
-    AOS.init();
-    AOS.refresh({ duration: 1000 });
-    
-
-    // Fetch user list only once on mount
-    // listAllUser();
-    // console.log("Home page loaded");
+    AOS.init({ duration: 1000 });
   }, []);
+
+  
+   
+    
+    
 
   return (
     <Router>
       <Header />
+      
       <Routes>
-        <Route path="/" element={
-          <>
-            <Hero />
-            <Display />
-            <TopSelling />
-          </>
-        } />
+        <Route path="/home" element={<><Hero /></>} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/product-details" element={<ProductDetail />} />
         <Route path="/new-arrivals" element={<Display />} />
         <Route path="/top-selling" element={<TopSelling />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/cart" element={<Cart />} />
+        
         <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
@@ -50,3 +49,18 @@ function App() {
 }
 
 export default App;
+
+
+
+/*import ProductList from './product-management/product';
+
+function App() {
+  return (
+    <div className="App">
+      <h1>My E-commerce App</h1>
+      <ProductList /> 
+    </div>
+  );
+}
+
+export default App;*/
