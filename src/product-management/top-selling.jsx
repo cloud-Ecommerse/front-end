@@ -1,40 +1,21 @@
-import React from "react";
-import tshirtImage from "../assets/s.png";
-import jeanImage from "../assets/jean.png";
-import dressImage from "../assets/dress.png";
-import jacketImage from "../assets/jacket.png";
+import React, { useEffect, useState } from "react";
 
 function Top_selling() {
-  const products = [
-    {
-      id: 1,
-      name: "T-SHIRT WITH TAPE DETAILS",
-      price: "$5",
-      image: tshirtImage,
-      rating: 5.0,
-    },
-    {
-      id: 2,
-      name: "Jean",
-      price: "$15",
-      image: jeanImage,
-      rating: 4.8,
-    },
-    {
-      id: 3,
-      name: "Taylor Linen Dress",
-      price: "$22",
-      image: dressImage,
-      rating: 4.7,
-    },
-    {
-      id: 4,
-      name: "Jacket",
-      price: "$30",
-      image: jacketImage,
-      rating: 4.9,
-    },
-  ];
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    // Fetch products from Strapi
+    const fetchProducts = async () => {
+      const apiUrl = "http://3.214.91.27:1337"; // Your Elastic IP
+      const response = await fetch(`${apiUrl}/api/products`);
+      const data = await response.json();
+      
+      // Set the fetched products to state
+      setProducts(data.data);
+    };
+
+    fetchProducts();
+  }, []);
 
   return (
     <div>
@@ -42,10 +23,13 @@ function Top_selling() {
       <ul>
         {products.map((product) => (
           <li key={product.id}>
-            <img src={product.image} alt={product.name} />
-            <h2>{product.name}</h2>
-            <p>{product.price}</p>
-            <p>Rating: {product.rating}</p>
+            <img
+              src={`http://3.214.91.27:1337${product.attributes.image.data.attributes.url}`} 
+              alt={product.attributes.name}
+            />
+            <h2>{product.attributes.name}</h2>
+            <p>{product.attributes.price}</p>
+            <p>Rating: {product.attributes.rating}</p>
           </li>
         ))}
       </ul>
