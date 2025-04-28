@@ -23,11 +23,7 @@ function Top_selling() {
       <ul>
         {products.map((product) => (
           <li key={product.id}>
-            <img
-              src={`http://3.214.91.27:1337${product.attributes.image.data.attributes.url}`} 
-              alt={product.attributes.name}
-            />
-            <h2>{product.attributes.name}</h2>
+            <h2>{product.attributes.productName}</h2>
             <p>{product.attributes.price}</p>
             <p>Rating: {product.attributes.rating}</p>
           </li>
