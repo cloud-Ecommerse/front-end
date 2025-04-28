@@ -6,7 +6,7 @@ import TopSelling from './product-management/top-selling';
 import Footer from './components/footer';
 import SignIn from './authentication/log-in';
 import SignUp from './authentication/sign-up';
-import Cart from './cart/cart-detail';
+
 import Profile from './profile-management/update-profile';
 import ProductDetail from "./product-management/product-detail";
 import Hero from './components/hero'; // <-- You forgot this import
@@ -36,7 +36,7 @@ function App() {
         <Route path="/product-details" element={<ProductDetail />} />
         <Route path="/new-arrivals" element={<Display />} />
         <Route path="/top-selling" element={<TopSelling />} />
-        <Route path="/cart" element={<Cart />} />
+        
         <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
