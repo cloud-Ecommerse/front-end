@@ -29,10 +29,6 @@ const Header = () => {
               >
                 Shop
               </NavLink>
-<<<<<<< HEAD
-=======
-
->>>>>>> d40cb0c (update)
               <NavLink
                 to="/new-arrivals"
                 className={({ isActive }) =>
